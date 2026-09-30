@@ -17,7 +17,10 @@ target_include_directories(
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra -Wpedantic -O3)
+target_compile_options(
+    ${TARGET_NAME}
+    PRIVATE -Wall -Wextra -Wpedantic -O3
+)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_options(${TARGET_NAME} PRIVATE -g3 -O0)
