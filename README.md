@@ -1,6 +1,6 @@
 # EC521-BPG-Security
 
-Group Members : Dylan Sheehan
+Group Members : Dylan Sheehan, and others!
 
 A repo for a EC521 final project about BPG security.
 
