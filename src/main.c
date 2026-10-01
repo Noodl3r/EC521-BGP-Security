@@ -21,9 +21,15 @@ int main(void) {
     while (running) {
         show_menu();
 
-        if (scanf("%d", &choice) != 1) {
-            flush_buf();
-            printf(RED "  Invalid input. Please enter a number 1-12.\n" RST);
+        char input[100];
+
+        if (fgets(input, sizeof(input), stdin) == NULL) {
+            printf(RED "  Invalid input.\n" RST);
+            pause_key();
+            continue;
+        }
+        if (sscanf(input, "%d", &choice) != 1) {
+            printf(RED "  Invalid input.\n" RST);
             pause_key();
             continue;
         }
@@ -70,7 +76,7 @@ int main(void) {
             break;
 
         default:
-            printf(RED "  Unknown option.  Please choose 1-12.\n" RST);
+            printf(RED "  Unknown option.\n" RST);
             pause_key();
         }
     }
