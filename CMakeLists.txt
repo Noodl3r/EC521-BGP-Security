@@ -10,7 +10,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Manually add source directories here.
 # You otherwise will need to glob and those can be inconsistent.
-add_executable(${TARGET_NAME} src/main.c)
+add_executable(${TARGET_NAME} 
+    src/main.c
+    src/display.c
+)
 
 target_include_directories(
     ${TARGET_NAME}
