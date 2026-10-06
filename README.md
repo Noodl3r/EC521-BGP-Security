@@ -1,6 +1,6 @@
 # EC521-BGP-Security
 
-Group Members : Dylan Sheehan
+Group Members : Dylan Sheehan, Kevin Wang
 
 A repo for a EC521 final project about BGP security.
 
