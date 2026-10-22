@@ -1,6 +1,7 @@
 /*
  * lib/state.go
- * Package level globals
+ * Package-level globals shared across the entire simulation.
+ * All mutable state lives here so the read/write surface is explicit.
  */
 package lib
 

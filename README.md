@@ -2,13 +2,11 @@
 
 Group Members : Dylan Sheehan, Kevin Wang
 
-A repo for a EC521 final project about BGP security.
+A repo for an EC521 final project about BGP security. This repository includes
+an interactive, in-memory BGP topology simulation.
 
-Currently there's a dummy project, you can ensure everything builds for you by
-making a build directory, going in there, and compiling / running the project :
+## Run
 
 ```sh
-mkdir build
-cd build
-cmake .. && make -j8 && ./project
+go run ./main
 ```
