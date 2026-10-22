@@ -1,14 +1,13 @@
 /*
- * main.go
- * Entry point.  Initialises the simulation, shows the startup screen,
- * then hands off to menu.Run() for the interactive loop.
+ * main/main.go
+ * Entry point.  Initialises the simulation, shows the welcome screen,
+ * then hands control to display.Run() for the interactive menu loop.
  *
- *  Build:   go build -o bgp_sim .
- *  Run:     ./bgp_sim
- *  Or:      go run .
+ *  Build:  go build -o bgp_sim ./main/
+ *  Run:    go run ./main/
  *
- *  Recommended first run: option 10 (Full Demo).
- *  Manual flow: options 5 → 6 → 7 in sequence.
+ *  Recommended first run : option 10  (Full guided demo)
+ *  Manual exploration     : options 5 → 6 → 7 in sequence
  */
 package main
 
@@ -20,8 +19,9 @@ import (
 )
 
 func main() {
-	fmt.Printf(lib.GRN + "[+] Simulation initialised.\n" + lib.RST)
-	fmt.Printf("[*] BGP sessions not yet established.  " + "No routes advertised yet.\n")
+	util.InitSim()
+
+	fmt.Printf(lib.GRN + "Ready\n" + lib.RST)
 
 	util.PauseKey()
 	display.Run()
